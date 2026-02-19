@@ -232,6 +232,31 @@ export const DEFAULT_LP_TEMPLATE: LPContent = {
     footerCta: { ...defaultFooterCta },
   },
 
+  // ==================== SPEAKERS ====================
+  speakers: {
+    enabled: false,
+    title: '',
+    subtitle: '',
+    items: [],
+    layout: 'grid',
+    footerCta: { ...defaultFooterCta },
+  },
+
+  // ==================== SPONSORS ====================
+  sponsors: {
+    enabled: false,
+    title: '',
+    subtitle: '',
+    tiers: [
+      { name: 'Diamante', enabled: true, color: '#B9F2FF', logoHeight: 'lg', items: [] },
+      { name: 'Ouro', enabled: true, color: '#FFD700', logoHeight: 'md', items: [] },
+      { name: 'Prata', enabled: true, color: '#C0C0C0', logoHeight: 'md', items: [] },
+      { name: 'Bronze', enabled: false, color: '#CD7F32', logoHeight: 'sm', items: [] },
+      { name: 'Apoio', enabled: false, color: '', logoHeight: 'sm', items: [] },
+    ],
+    footerCta: { ...defaultFooterCta },
+  },
+
   // ==================== ABOUT ====================
   about: {
     enabled: true,
@@ -330,6 +355,8 @@ export const DEFAULT_LP_TEMPLATE: LPContent = {
     'testimonials',
     'videoCarousel',
     'kpis',
+    'speakers',
+    'sponsors',
     'about',
     'faq',
     'form',

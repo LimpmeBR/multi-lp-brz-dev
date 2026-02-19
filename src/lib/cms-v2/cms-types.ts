@@ -241,6 +241,43 @@ export interface ForWhomSection {
   footerCta?: SectionFooterCTA;
 }
 
+export interface SpeakersSection {
+  enabled?: boolean;
+  title: string;
+  subtitle?: string;
+  items: Array<{
+    name: string;
+    role: string;
+    bio: string;
+    image: string;
+    socials?: {
+      instagram?: string;
+      linkedin?: string;
+      website?: string;
+    };
+  }>;
+  layout?: 'grid' | 'featured';
+  footerCta?: SectionFooterCTA;
+}
+
+export interface SponsorsSection {
+  enabled?: boolean;
+  title: string;
+  subtitle?: string;
+  tiers: Array<{
+    name: string;
+    enabled: boolean;
+    color?: string;
+    logoHeight?: 'sm' | 'md' | 'lg';
+    items: Array<{
+      name: string;
+      logo: string;
+      url?: string;
+    }>;
+  }>;
+  footerCta?: SectionFooterCTA;
+}
+
 export interface FooterSection {
   enabled?: boolean;
   logo: string;
@@ -366,6 +403,8 @@ export interface LPContent {
   plans: PlansSection;
   testimonials: TestimonialsSection;
   kpis: KpisSection;
+  speakers: SpeakersSection;
+  sponsors: SponsorsSection;
   about: AboutSection;
   contact: ContactSection;
   beforeAfter: BeforeAfterSection;

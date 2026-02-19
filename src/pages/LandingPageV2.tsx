@@ -25,6 +25,8 @@ import { FAQV2 } from '@/components/landing-v2/FAQV2';
 import { ForWhomV2 } from '@/components/landing-v2/ForWhomV2';
 import { FooterV2 } from '@/components/landing-v2/FooterV2';
 import { FormV2 } from '@/components/landing-v2/FormV2';
+import { SpeakersV2 } from '@/components/landing-v2/SpeakersV2';
+import { SponsorsV2 } from '@/components/landing-v2/SponsorsV2';
 import { WhatsAppButtonV2 } from '@/components/landing-v2/WhatsAppButtonV2';
 import { TrackingHeadV2 } from '@/components/landing-v2/TrackingHeadV2';
 import { ExitIntentPopupV2 } from '@/components/landing-v2/ExitIntentPopupV2';
@@ -76,6 +78,10 @@ const renderSection = (sectionId: string, content: LPContent, lpKey: string, ind
       return <ForWhomV2 key={key} data={content.forWhom} lpKey={lpKey} couponCode={couponCode} />;
     case 'form':
       return <FormV2 key={key} data={content.form} lpKey={lpKey} couponCode={couponCode} />;
+    case 'speakers':
+      return <SpeakersV2 key={key} data={content.speakers} lpKey={lpKey} couponCode={couponCode} />;
+    case 'sponsors':
+      return <SponsorsV2 key={key} data={content.sponsors} lpKey={lpKey} couponCode={couponCode} />;
     default:
       console.warn(`[CMS-V2] Seção desconhecida: ${sectionId}`);
       return null;

@@ -9,7 +9,7 @@ export type {
   TestimonialsSection, KpisSection, AboutSection, ContactSection,
   BeforeAfterSection, ProcessSection, ServicesSection, VideoSection,
   VideoCarouselSection, WhyChooseSection, CtaFinalSection, FaqSection,
-  FormSection, ForWhomSection, FooterSection,
+  FormSection, ForWhomSection, FooterSection, SpeakersSection, SponsorsSection,
   DesignSettings, SEOSettings, TrackingSettings,
   ConversionSettings, CountdownSettings, ExitIntentSettings, SocialProofSettings,
   GlobalMenuSettings, FloatingWhatsappSettings, SectionFooterCTA,
