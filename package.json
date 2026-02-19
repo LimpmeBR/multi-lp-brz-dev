@@ -2,12 +2,26 @@
   "name": "multi-lp-brz-dev",
   "version": "1.0.0",
   "description": "Multi Landing Page System — BRZ Dev",
-  "main": "src/index.ts",
+  "type": "module",
+  "main": "dist/index.js",
   "types": "src/index.ts",
-  "private": true,
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./src/index.ts"
+    },
+    "./styles/*": "./src/styles/*"
+  },
+  "files": [
+    "dist",
+    "src",
+    "setup.sql",
+    "SETUP.md"
+  ],
   "scripts": {
+    "build": "vite build",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint src/"
+    "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
     "@hookform/resolvers": ">=3.0.0",
@@ -63,6 +77,7 @@
     "@tanstack/react-query": "^5.90.21",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.4",
     "browser-image-compression": "^2.0.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -77,6 +92,7 @@
     "sonner": "^2.0.7",
     "tailwind-merge": "^3.5.0",
     "typescript": "^5.9.3",
+    "vite": "^7.3.1",
     "zod": "^4.3.6"
   }
 }
